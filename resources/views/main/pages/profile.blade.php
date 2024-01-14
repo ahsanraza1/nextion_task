@@ -4,7 +4,7 @@
     Profile
 @endsection
 @section('subpanel')
-<div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
+<div class="container d-flex flex-column mt-3 justify-content-center align-items-center">
 <div class="col-lg-8 col-xlg-9 col-md-12">
     <div class="card">
         <div class="card-body">

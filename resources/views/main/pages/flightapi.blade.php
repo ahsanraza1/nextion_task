@@ -13,20 +13,11 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <!-- Card 1 -->
         <div class="col mb-4">
-            <div class="card d-flex flex-column justify-content-center align-items-center"">
+            <div class="card d-flex flex-column justify-content-center align-items-center">
                 Today flights {{$today_flights}}
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card d-flex flex-column justify-content-center align-items-center"">
-                Today flights {{$today_flights}}
-            </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card d-flex flex-column justify-content-center align-items-center"">
-                Today flights {{$today_flights}}
-            </div>
-        </div>
+        
 
 
         <!-- Add more cards as needed -->

@@ -1,17 +1,30 @@
 @extends('main.layout.dashboard_layout')
 @section('content')
-    <div class="content ">
+  <style>
+    @media (max-width: 768px) {
+      .navbarh{
+        margin-left: 33px;
+      }
+      .navbar-collapse{
+        display: contents;
+      }
+      .navtop{
+        /* background-color: white !important; */
+      }
+    }
+  </style>
+    <div class="content">
         <div class="content-fluid ">
-            <div class="content">
+            <div class="content navbarh">
                 
 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                <nav class="navbar navbar-expand-lg navbar-light bg-light navtop">
+                    {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button> --}}
                 
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav">
                         <li class="nav-item active">
                           <a class="nav-link" href="#"><strong>@yield('page')</strong> <span class="sr-only">(current)</span></a>
@@ -27,8 +40,8 @@
 
                         <form action="{{ route('logout') }}" method="POST">
                           @csrf
-                          <strong>{{auth()->user()->name}}</strong>
-                          <button type="submit" class="btn btn-danger">Logout</button>
+                          {{-- <small>{{auth()->user()->name}}</small> --}}
+                          <button type="submit" class="btn btn-danger btn-sm">Logout</button>
                       </form>
                         @else
                         <a href="{{route('login')}}">

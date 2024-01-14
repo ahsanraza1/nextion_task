@@ -51,11 +51,17 @@
       padding: 20px 0;
       list-style-type: none;
     }
+    #sidebar .sm {
+      margin-top: -15px
+    }
+    #sidebar .lg {
+      margin-top: -15px
+    }
 
     #sidebar ul li {
       padding: 15px;
       font-size: 1.2em;
-      border-bottom: 1px solid #555;
+      border-bottom: 0px solid #555;
     }
 
     #sidebar ul li a {
@@ -76,10 +82,21 @@
     @media (max-width: 768px) {
       #sidebar {
         left: 0;
+        width:0px;
+      }
+      #sidebarCollapse {
+        left: 3px;
+        /* top: 55px; */
+        /* z-index: 2; */
+      }
+      #dismiss {
+        left: 123px;
+        /* top: 55px; */
+        /* z-index: 2; */
       }
 
       #content {
-        margin-left: 250px;
+        margin-left: 0px;
       }
     }
   </style>
@@ -111,6 +128,11 @@
         <a href="{{route('flight-api')}}">
           <span class="sm float-right"><i class="fa fa-plane" aria-hidden="true"></i></span><span class="lg d-none">Flight</span></a>
       </li>
+
+      <li>
+        <a href="{{route('docs')}}">
+          <span class="sm float-right"><i class="fa fa-file" aria-hidden="true"></i></span><span class="lg d-none">Docs</span></a>
+      </li>
     </ul>
   </nav>
 
@@ -140,7 +162,12 @@
       $('#sidebar').removeClass('active');
       $('#sidebarCollapse').removeClass('d-none');
       $('#dismiss').addClass('d-none');
-      $('#content').css('margin-left', '51px');
+
+      if ($(window).width() <= 767) {
+        $('#content').css('margin-left', '0px');
+      }else{
+        $('#content').css('margin-left', '51px');
+    }
       $('.lg').addClass('d-none');
       $('.sm').removeClass('d-none');
     });

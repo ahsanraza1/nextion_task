@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth', 'verified']], function (){
     Route::get('profile', [DashboardController::class, 'profile'])->name('profile');
     Route::post('update-profile', [UserController::class, 'updateProfile'])->name('update-profile');
     Route::get('flight-api', [FlightApiController::class, 'flightAPi'])->name('flight-api');
+    Route::get('docs', [DashboardController::class, 'docs'])->name('docs');
 }); 
 Route::post('logout', function (Request $request)
 {
