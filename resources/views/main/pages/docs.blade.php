@@ -5,15 +5,15 @@
 @endsection
 @section('subpanel')
 <div class="container d-flex flex-column mt-3 justify-content-center align-items-center">
-<div class="col-lg-8 col-xlg-9 col-md-12">
+<div class="col-lg-8 col-xlg-9 col-md-12 mb-5">
     <p>
-        <h1>Project Documentation</h1>
+        <h2>Project Documentation</h2>
         <p>
             <ul>
                 <li>
-                    <h3>
+                    <h5>
                         Authentication
-                    </h3>
+                    </h5>
                     <ul>
                         <li>
                             <p>
@@ -21,9 +21,9 @@
                             </p>
                         </li>
                         <li>
-                            <h3>
+                            <h5>
                             Registeration
-                            </h3>
+                            </h5>
                             <ul>
                                 <li>
                                     End user can register by providing Name, Email and Password.
@@ -31,9 +31,9 @@
                             </ul>
                         </li>
                         <li>
-                            <h3>
+                            <h5>
                             Email verification
-                            </h3>
+                            </h5>
                             <ul>
                                 <li>
                                     After registration user will get an email for verification. By clicking on provided link system will lead the request to a route named "verification.verifyEmail". After extracting token from request and matching it with user's token ( generated and saved in DB while registering user ) user will be loggedin and can proceed to dashboard.
@@ -41,9 +41,9 @@
                             </ul>
                         </li>
                         <li>
-                            <h3>
+                            <h5>
                             Login
-                            </h3>
+                            </h5>
                             <ul>
                                 <li>
                                     User have to provide valid email and password for login.
@@ -53,26 +53,38 @@
                     </ul>
                 </li>
                 <li>
-                    <h3>
+                    <h5>
                         Dashboard
-                    </h3>
+                    </h5>
                     <ul>
                         <li>
                             <p>
                                 User will be shown a styled dashboard.
                             </p>
                         </li>
+
                         <li>
-                            <h3>
+                            <ul>
+                                <h5>Top Navbar</h5>
+                                <ul>
+                                    <li>
+                                        It has a logout button and User name
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h5>
                             Side Bar
-                            </h3>
+                            </h5>
                             <ul>
                                 <li>
                                     Side bar ( collapseable ) has 3 links ( icons when closed ).
                                 </li>
                                 <li>
                                     <ul>
-                                        <h3>Profile</h3>
+                                        <h5>Profile</h5>
                                         <ul>
                                             <li>
                                                 Profile is the default section displayed in dashboard. 
@@ -89,46 +101,58 @@
                                         </ul>
                                     </ul>
                                 </li>
+                                
                                 <li>
                                     <ul>
-                                        <h3>Flight Data</h3>
+                                        <h5>Flight Data</h5>
                                         <ul>
                                             <li>
-                                                As per requirements i could integrate a third party api of my ch 
+                                                As per requirements i could integrate a third party api of my choice. so i picked Flight Data Api.
                                             </li>
                                             <li>
-                                                Form displays current user iformation ( Name and Email ) 
+                                                This section will display : 
+                                                <ul>
+                                                    <li>
+                                                        Number of flights scheduled today.
+                                                    </li>
+                                                    <li>
+                                                        Number of scheduled flights given by API
+                                                    </li>
+                                                    <li>
+                                                        Other numbers of flights based on their status. (Active flights, Landed flights, Diverted flights, Incident flights, Cancelled flights)
+                                                    </li>
+                                                </ul>
                                             </li>
+                                        </ul>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <h5>Docs</h5>
+                                        <ul>
                                             <li>
-                                                It has a new password field for changing password. 
-                                            </li>
-                                            <li>
-                                                User has to provide his password for updating profile information.
+                                                This section is a little Documentation about this project.
                                             </li>
                                         </ul>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <h5>
+                        Checks
+                    </h5>
+                    <ul>
                         <li>
-                            <h3>
-                            Email verification
-                            </h3>
-                            <ul>
-                                <li>
-                                    After registration user will get an email for verification. By clicking on provided link system will lead the request to a route named "verification.verifyEmail". After extracting token from request and matching it with user's token ( generated and saved in DB while registering user ) user will be loggedin and can proceed to dashboard.
-                                </li>
-                            </ul>
+                            Site is responsive.
                         </li>
                         <li>
-                            <h3>
-                            Login
-                            </h3>
-                            <ul>
-                                <li>
-                                    User have to provide valid email and password for login.
-                                </li>
-                            </ul>
+                            Errors in forms are shown under respective fields
                         </li>
                     </ul>
                 </li>
