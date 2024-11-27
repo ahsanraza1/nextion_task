@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5">
         <h1 class="row justify-content-center d-flex flex-column align-items-center">
-            NEXTION
+            LARAVEL
         </h1>
         <div class="row justify-content-center d-flex flex-column align-items-center">
             <div class="col-md-8">

@@ -107,7 +107,7 @@
                                         <h5>Flight Data</h5>
                                         <ul>
                                             <li>
-                                                As per requirements i could integrate a third party api of my choice. so i picked Flight Data Api.
+                                                In this project a third party API, Flight Data Api is integrated.
                                             </li>
                                             <li>
                                                 This section will display : 
